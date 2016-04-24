@@ -10,16 +10,21 @@ export default React.createClass({
         return this.props.hasVoted === entry;
     },
     render: function() {
-        return <div className="voting">
-            {this.getPair().map(entry =>
-                <button key={entry}
-                        disabled={this.hasVotedFor(entry)}
-                        onClick={() => this.props.vote(entry)}
-                >
-                    <h1>{entry}</h1>
-                    {this.hasVotedFor(entry) ? <div className="label">Voted</div> : null}
-                </button>
-            )}
+        return <div className="vote">
+            <div className="vote__greet">Pick your favorite</div>
+            <div className="vote__buttons-wrapper">
+                {this.getPair().map(entry =>
+                    <button className="vote__button"
+                            key={entry}
+                            disabled={this.hasVotedFor(entry)}
+                            onClick={() => this.props.vote(entry)}
+                    >
+                        <div className="vote__button__label">{entry}</div>
+                        {this.hasVotedFor(entry) ?
+                            <div className="vote__button__label--voted">Voted</div> : null}
+                    </button>
+                )}
+            </div>
         </div>;
     }
 });

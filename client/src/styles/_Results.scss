@@ -1,0 +1,36 @@
+.results {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.results__body {
+    margin-top: 30px;
+    width: 60%;
+    height: 100%;
+}
+
+.results__title {
+    font-size: 34px;
+    font-weight: bold;
+    height: 60px;
+}
+
+.results__item {
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+
+.results__item__name {
+    width: 150px;
+}
+
+.results__next {
+    margin-top: 60px;
+    text-align: right;
+}
+
+.results__next__button {
+    @extend .pure-button;
+}

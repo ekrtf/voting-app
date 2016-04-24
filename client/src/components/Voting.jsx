@@ -17,10 +17,10 @@ function mapStateToProps(state) {
 export const Voting = React.createClass({
     mixins: [PureRenderMixin],
     render: function() {
-        return <div>
-            {this.props.winner
-                ? <Winner ref="winner" winner={this.props.winner}/>
-                : <Vote {...this.props}/>
+        return <div className="voting">
+            {this.props.winner ?
+                <Winner ref="winner" winner={this.props.winner}/> :
+                <Vote {...this.props}/>
             }
         </div>;
     }

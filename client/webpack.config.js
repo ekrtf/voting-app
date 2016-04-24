@@ -7,6 +7,10 @@ module.exports = {
             test: /\.jsx?$/,
             exclude: /node_modules/,
             loader: 'react-hot!babel'
+        }, {
+            test: /\.s?css$/,
+            exclude: /node_modules/,
+            loaders: ['style', 'css', 'sass']
         }]
     },
     resolve: {

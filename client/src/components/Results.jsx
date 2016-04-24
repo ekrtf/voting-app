@@ -27,20 +27,23 @@ export const Results = React.createClass({
     // TODO break this down into a Tally component
     render: function() {
         return this.props.winner ?
-        <Winner ref="winner" winner={this.props.winner} /> :
-        <div className="results">
-            <div className="tally">
-                {this.getPair().map(entry =>
-                    <div key={entry} className="entry">
-                        <h1>{entry}</h1>
-                        <div class="voteCount">{this.getVotes(entry)}</div>
+            <Winner ref="winner" winner={this.props.winner} /> :
+            <div className="results">
+                <div className="results__body">
+                    <div className="results__title">Results</div>
+                    {this.getPair().map(entry =>
+                        <div key={entry} className="results__item">
+                            <div className="results__item__name">{entry}</div>
+                            <div className="results__item__votes">{this.getVotes(entry)}</div>
+                        </div>
+                    )}
+                    <div className="results__next">
+                        <button ref="next" className="results__next__button" onClick={this.props.next}>
+                            <div className="results__next__button__label">Next</div>
+                        </button>
                     </div>
-                )}
-            </div>
-            <div className="management">
-                <button ref="next" className="next" onClick={this.props.next}>Next</button>
-            </div>
-        </div>;
+                </div>
+            </div>;
     }
 });
 
