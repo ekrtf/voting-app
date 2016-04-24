@@ -1,5 +1,4 @@
-import Server from './lib/server';
+#!/bin/env node
 
-let app = new Server();
-app.init();
-app.start();
+require('babel-core/register');
+require('./lib/server.js');

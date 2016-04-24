@@ -4,7 +4,18 @@
   "description": "react redux tutorial: http://teropa.info/blog/2015/09/10/full-stack-redux-tutorial.html",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "install:client": "cd client && npm install",
+    "install:server": "cd server && npm install",
+    "preinstall": "npm run install:client && npm run install:server",
+    "start:client": "cd client && npm run build",
+    "start:server": "cd server && npm run start",
+    "start": "npm run start:client && npm run start:server",
+    "clean:client": "cd client && npm run clean",
+    "clean:server": "cd server && npm run clean",
+    "clean": "npm run clean:client && npm run clean:server",
+    "test:client": "cd client && npm run test",
+    "test:server": "cd server && npm run test",
+    "test": "npm run test:client && npm run test:server"
   },
   "repository": {
     "type": "git",

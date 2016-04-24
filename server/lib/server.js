@@ -53,4 +53,6 @@ class Server {
     }
 }
 
-export default Server;
+let app = new Server();
+app.init();
+app.start();
