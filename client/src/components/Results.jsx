@@ -24,11 +24,11 @@ export const Results = React.createClass({
         }
         return 0;
     },
+    // TODO break this down into a Tally component
     render: function() {
         return this.props.winner ?
         <Winner ref="winner" winner={this.props.winner} /> :
         <div className="results">
-            // TODO break this down into a Tally component
             <div className="tally">
                 {this.getPair().map(entry =>
                     <div key={entry} className="entry">

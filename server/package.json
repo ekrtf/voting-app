@@ -17,14 +17,17 @@
     "mocha": "^2.4.5"
   },
   "dependencies": {
+    "express": "^4.13.4",
     "immutable": "^3.8.1",
+    "morgan": "^1.7.0",
+    "path": "^0.12.7",
     "redux": "^3.5.2",
     "socket.io": "^1.4.5"
   },
   "babel": {
-      "presets": [
-          "es2015"
-      ]
+    "presets": [
+      "es2015"
+    ]
   },
   "license": "MIT"
 }

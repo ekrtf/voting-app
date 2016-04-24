@@ -9,3 +9,4 @@ logs
 node_modules
 
 # Build
+client/dist/bundle.js

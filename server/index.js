@@ -1,11 +1,5 @@
-import makeStore from './src/store';
-import startServer from './src/server';
+import Server from './lib/server';
 
-export const store = makeStore();
-startServer(store);
-
-store.dispatch({
-    type: 'SET_ENTRIES',
-    entries: require('./data/entries.json')
-});
-store.dispatch({type: 'NEXT'});
+let app = new Server();
+app.init();
+app.start();
