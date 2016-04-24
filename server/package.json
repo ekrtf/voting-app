@@ -4,6 +4,7 @@
   "description": "server for voting app",
   "main": "index.js",
   "scripts": {
+    "start": "babel-node index.js",
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js  --recursive",
     "test:watch": "npm run test -- --watch"
   },
@@ -15,12 +16,15 @@
     "chai-immutable": "^1.5.4",
     "mocha": "^2.4.5"
   },
-  "babel": {
-    "presets": [
-      "es2015"
-    ]
-  },
   "dependencies": {
-    "immutable": "^3.8.1"
-  }
+    "immutable": "^3.8.1",
+    "redux": "^3.5.2",
+    "socket.io": "^1.4.5"
+  },
+  "babel": {
+      "presets": [
+          "es2015"
+      ]
+  },
+  "license": "MIT"
 }
